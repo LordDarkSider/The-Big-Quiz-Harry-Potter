@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°6 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°6, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°6</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers" target="_blank">tome 1</a> pour réussir ce défi
+            </p>
+
+            <p id="difficulty" title="2"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Trouver les mois des évènements de l’année 1991-1992 (tome 1)
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p>
+                    <label>
+                        • Harry devient l’attrapeur de l'équipe de Quidditch de Gryffondor. ⟶
+                        <select id="v1" name="event 1">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Naissance du dragon Norbert. ⟶
+                        <select id="v2" name="event 2">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry apprend qu’il est un sorcier. ⟶
+                        <select id="v3" name="event 3">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry reçoit la cape d'invisibilité qui appartenait à son père. ⟶
+                        <select id="v4" name="event 4">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry est envoyé par le Choixpeau magique à Gryffondor. ⟶
+                        <select id="v5" name="event 5">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry affronte Voldemort et le professeur Quirrell. ⟶
+                        <select id="v6" name="event 6">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Premier match de Quidditch d'Harry opposant Gryffondor à Serpentard. ⟶
+                        <select id="v7" name="event 7">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Un troll pénètre dans Poudlard avant d’être neutralisé par Harry et Ron. ⟶
+                        <select id="v8" name="event 8">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Firenze sauve Harry dans la Forêt interdite. ⟶
+                        <select id="v9" name="event 9">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Les élèves de Poudlard reviennent à Londres par le Poudlard Express. ⟶
+                        <select id="v10" name="event 10">
+                            <option value="">‎</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option>
+                        </select>
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('../easter eggs/easter_eggs_06.exe')" title="Télécharger l'Easter egg">Easter egg n°6</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommendé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers_(film)" target="_blank">film du tome 1</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('05.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('07.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+
+        <script>
+
+            let key = document.getElementById("key");
+            let fields = [];
+            for(let k=1; k<=10; k++){fields.push(document.getElementById("v"+String(k)))}
+
+            function change_key() {
+                x = code(fields.map(f => f.value));
+                key.innerHTML = get_key(x);
+            }
+
+            let music_src = "../ressources/music/HP1/Hogwarts Forever! and the Moving Stairs.mp3";
+
+        </script>
+
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
