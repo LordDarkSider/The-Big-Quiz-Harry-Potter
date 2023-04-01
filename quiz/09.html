@@ -2,9 +2,9 @@
 <html lang="fr">
 
 	<head>
-		<title>Défi n°7 | The Big Quiz HP</title>
+		<title>Défi n°9 | The Big Quiz HP</title>
 		<meta charset="utf-8">
-        <meta name="description" content="Défi n°7, The Big Quiz Harry Potter">
+        <meta name="description" content="Défi n°9, The Big Quiz Harry Potter">
         <meta name="author" content="Titouan Hinschberger">
         <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
         <link href="../ressources/style.css" rel="stylesheet" media="all">
@@ -18,13 +18,13 @@
 
         <div id="infos">
 
-            <h2>Défi n°7</h2>
+            <h2>Défi n°9</h2>
 
             <p id="warning">
-                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers" target="_blank">tome 1</a> pour réussir ce défi
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets" target="_blank">tome 2</a> pour réussir ce défi
             </p>
 
-            <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
+            <p id="difficulty" title="1"></p> <!-- 1,2,3 ou 4 -->
 
             <p id="instruction">
                 👉<u>Consigne :</u> Répondre aux questions
@@ -38,22 +38,22 @@
 
                 <p>
                     <label>
-                        Combien la somme de 2 Gallions et 5 Mornilles équivaut-elle en Noises ?<br>
+                        Combien de Weasley y a-t-il à Poudlard durant l’année 1992-1993 (tome 2) ?<br>
                         <input type="number" id="v1" name="question 1" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        Quel est le premier mot de passe pour accéder à la salle commune de Gryffondor lors de l’année 1991-1992 (tome 1)<br>
-                        <input type="text" id="v2" name="question 2">
+                        Qui reçoit Mr Malefoy dans la boutique d’accessoires consacrés à la magie noire située dans l'Allée des Embrumes ?<br>
+                        <input type="text" id="v2" name="question 2" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        Parmis les étudiants de Poudlard, qui a attaqué physiquement Lord Voldemort sans le savoir durant l'année 1991-1992 (tome 1)<br>
-                        <input type="text" id="v3" name="question 3" placeholder="Nom de famille">
+                        Quel sortilège (formule) lance Rogue à Lockhart lors de l'ouverture du club de duel ?<br>
+                        <input type="text" id="v3" name="question 3" placeholder="formule">
                     </label>
                 </p>
 
@@ -65,15 +65,15 @@
 
             <p>
                 🗝️ La clé est <span id="key">. . .</span><br>
-                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('../easter eggs/easter_egg_07.exe')" title="Télécharger l'Easter egg">Easter egg n°7</a><br>
-                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers_(film)" target="_blank">film du tome 1</a>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('../easter eggs/easter_egg_09.exe')" title="Télécharger l'Easter egg">Easter egg n°9</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets_(film)" target="_blank">film du tome 2</a>
             </p>
 
 		</div>
 
         <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
-        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('06.html')">
-        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('08.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('08.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('10.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
@@ -93,7 +93,7 @@
                 key.innerHTML = get_key(x);
             }
 
-            let music_src = "../ressources/music/Hedwig's Theme.mp3";
+            let music_src = "../ressources/music/HP2/Knockturn Alley.mp3";
 
         </script>
 
@@ -101,6 +101,6 @@
         <script src="../ressources/script/music.js"></script>
 
 
-</body>
+	</body>
 
 </html>

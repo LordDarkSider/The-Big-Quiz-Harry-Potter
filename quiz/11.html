@@ -2,9 +2,9 @@
 <html lang="fr">
 
 	<head>
-		<title>Défi n°1 | The Big Quiz HP</title>
+		<title>Défi n°11 | The Big Quiz HP</title>
 		<meta charset="utf-8">
-        <meta name="description" content="Défi n°1, The Big Quiz Harry Potter">
+        <meta name="description" content="Défi n°11, The Big Quiz Harry Potter">
         <meta name="author" content="Titouan Hinschberger">
         <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
         <link href="../ressources/style.css" rel="stylesheet" media="all">
@@ -18,10 +18,10 @@
 
         <div id="infos">
 
-            <h2>Défi n°1</h2>
+            <h2>Défi n°11</h2>
 
             <p id="warning">
-                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers" target="_blank">tome 1</a> pour réussir ce défi
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets" target="_blank">tome 2</a> pour réussir ce défi
             </p>
 
             <p id="difficulty" title="2"></p> <!-- 1,2,3 ou 4 -->
@@ -38,25 +38,27 @@
 
                 <p>
                     <label>
-                        La famille Dursley vit à Privet Drive, à quel numéro exactement ?<br>
-                        <input type="number" id="v1" name="question 1" min="0">
+                        Quel est la première personne que croisent Harry et Ron lorsqu'ils arrivent à Poudlard pour leur deuxième année ?<br>
+                        <input type="text" id="v1" name="question 1" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        Combien y a-t-il de joueurs dans un match de Quidditch ?<br>
+                        De combien d'années Harry Potter remonte-t-il le temps grâce au journal de Jedusor ?<br>
                         <input type="number" id="v2" name="question 2" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        Combien de points Dumbledore accorde-t-il à Neville lors du banquet de fin d'année ?<br>
-                        <input type="number" id="v3" name="question 3" min="0">
+                        Hormis les propriétés curatives de leurs larmes, quel autre pouvoir possède le Phénix ?<br>
+                        <select id="v3" name="question 3">
+                            <option value="">‎</option><option value="assourdir">Rendre sourd ceux qui entendent son chant</option><option value="transformer">Transformer un sorcier en animal</option><option value="prédire">Voir l’avenir</option><option value="porter">Porter des charges lourdes</option><option value="pétrifier">Pétrifier ceux qui le regarde</option><option value="feu">Cracher du feu</option><option value="apaiser">Apaiser la colère</option>
+                        </select>
                     </label>
                 </p>
-
+                
             </form>
 
 		</div>
@@ -65,14 +67,15 @@
 
             <p>
                 🗝️ La clé est <span id="key">. . .</span><br>
-                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('../easter eggs/easter_egg_01.exe')" title="Télécharger l'Easter egg">Easter egg n°1</a><br>
-                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers_(film)" target="_blank">film du tome 1</a>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('../easter eggs/easter_egg_11.exe')" title="Télécharger l'Easter egg">Easter egg n°11</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets_(film)" target="_blank">film du tome 2</a>
             </p>
 
 		</div>
 
         <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
-        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('02.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('10.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('12.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
@@ -92,10 +95,10 @@
                 key.innerHTML = get_key(x);
             }
 
-            let music_src = "../ressources/music/HP1/The Arrival of Baby Harry.mp3";
+            let music_src = "../ressources/music/HP2/Gilderoy Lockhart.mp3";
 
         </script>
-        
+
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 
