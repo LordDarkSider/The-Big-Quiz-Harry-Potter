@@ -3,9 +3,9 @@ function go_to(link){
     else{document.location.href = link}
 }
 
-function easter_egg(link){
+function easter_egg(num){
     if(confirm("Souhaitez-vous télécharger l'easter egg ?\n\nℹ️ Si vous êtes sur la version hors ligne cette opération n'est pas nécessaire. Le fichier se trouve déjà dans le dossier 'easter eggs'.")){
-        document.location.href = link;
+        window.open(links_easter_eggs.get(num), '_blank');
     }
 }
 
