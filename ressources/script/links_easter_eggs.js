@@ -14,5 +14,10 @@ let links_easter_eggs = new Map([
     ["13", "https://drive.google.com/file/d/1UzsuvTwEvVDlkIkgMRHdf1o5scYKfEwK/"],
     ["14", "https://drive.google.com/file/d/16Bi31OKUKZ5SJx6_2PQYA98ZkBtfQlR-/"],
     ["15", "https://drive.google.com/file/d/1bfx49Pnf2uAlUxhj5yg8lQEnzE4SrTjL/"],
-    ["16", "https://drive.google.com/file/d/1H9UELZxiMDkPzGzICf4H90vqAst2arJU/"]
+    ["16", "https://drive.google.com/file/d/1H9UELZxiMDkPzGzICf4H90vqAst2arJU/"],
+    ["17", "https://drive.google.com/file/d/1XT2Ktx2Ux6isI0e5olIuCup_7kdIr-HO/"],
+    ["18", "https://drive.google.com/file/d/117Z_H6vd5GKhNL_TnowhvEeQ7XFfaoqf/"],
+    ["19", "https://drive.google.com/file/d/1w3hsdy6U1-5pWqh0XSMEtgEk_XcAtBTs/"],
+    ["20", "https://drive.google.com/file/d/1I0Zr3WTQg2JFDztQ4cdjKG-uV1yGh9YC/"],
+    ["21", "https://drive.google.com/file/d/1Zv2lpDPBdfmGoE1_FpQEmMkijMcg9sHv/"]
 ]);
