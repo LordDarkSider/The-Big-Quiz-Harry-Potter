@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Accueil, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
+        <link href="ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="presentation">
+
+            <h2>Accueil</h2>
+
+            <p>
+                Bienvenue sur ce grand quiz Harry Potter !
+                <br><br>
+                ❓ Il rassemble des dizaines de défis pour les amateurs et fins connaisseurs de cette saga.
+                Pour chaque défi il faut remplir, sélectionner ou cocher des cases selon la consigne donnée.
+                <br><br>
+                🗝️ Lorsque vous aurez complété entièrement un défi, une clé vous sera donnée.
+                Celle-ci vous permettra d'ouvrir un easter egg (une surprise) mais seulement si vous avez correctement répondu.
+                <br><br>
+                🚥 Il y a quatre niveaux de difficulté allant de "FACILE" (c'est déjà compliqué) à "EXTRÊME" (avec ceux-là vous allez vous casser la tête).
+                <br><br>
+                📚 La plupart des réponses (même les anecdotes les plus méconnues) se trouvent dans les livres, n'hésitez pas y jeter un coup d'oeil si vous n'y arrivez pas.
+                En dernier recours ou pour vérifier l'orthographe vous pouvez utiliser le <a href="https://harrypotter.fandom.com/fr/wiki/Wiki_Harry_Potter" target="_blank">Wiki Harry Potter.</a>
+                <br><br>
+                Bon courage !
+            <p>
+
+        </div>
+
+		<div id="list_challenges">
+
+            <h2>Défis</h2>
+
+            <table class="timpair, t12">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_%C3%A0_l%27%C3%A9cole_des_sorciers" target="blank"><h3>Tome 1</h3></a></td></tr>
+                <tr><td onclick="go_to('quiz/01.html')">• Quiz 01</td></tr>
+                <tr><td onclick="go_to('quiz/02.html')">• Quiz 02</a></td></tr>
+                <tr><td onclick="go_to('quiz/03.html')">• Quiz 03</a></td></tr>
+                <tr><td onclick="go_to('quiz/04.html')">• Quiz 04</a></td></tr>
+                <tr><td onclick="go_to('quiz/05.html')">• Quiz 05</a></td></tr>
+                <tr><td onclick="go_to('quiz/06.html')">• Quiz 06</a></td></tr>
+                <tr><td onclick="go_to('quiz/07.html')">• Quiz 07</a></td></tr>
+            </table>
+
+            <table class="tpair, t12">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets" target="blank"><h3>Tome 2</h3></a></td></tr>
+                <tr><td onclick="go_to('quiz/08.html')">• Quiz 08</a></td></tr>
+                <tr><td onclick="go_to('quiz/09.html')">• Quiz 09</a></td></tr>
+                <tr><td onclick="go_to('quiz/10.html')">• Quiz 10</a></td></tr>
+                <tr><td onclick="go_to('quiz/11.html')">• Quiz 11</a></td></tr>
+                <tr><td onclick="go_to('quiz/12.html')">• Quiz 12</a></td></tr>
+                <tr><td onclick="go_to('quiz/13.html')">• Quiz 13</a></td></tr>
+                <tr><td onclick="go_to('quiz/14.html')">• Quiz 14</a></td></tr>
+                <tr><td onclick="go_to('quiz/15.html')">• Quiz 15</a></td></tr>
+                <tr><td onclick="go_to('quiz/16.html')">• Quiz 16</a></td></tr>
+            </table>
+
+            <table class="timpair, t34">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_prisonnier_d%27Azkaban" target="blank"><h3>Tome 3</h3></a></td></tr>
+                <tr><td onclick="go_to('quiz/17.html')">• Quiz 17</a></td></tr>
+                <tr><td onclick="go_to('quiz/18.html')">• Quiz 18</a></td></tr>
+                <tr><td onclick="go_to('quiz/19.html')">• Quiz 19</a></td></tr>
+                <tr><td onclick="go_to('quiz/20.html')">• Quiz 20</a></td></tr>
+                <tr><td onclick="go_to('quiz/21.html')">• Quiz 21</a></td></tr>
+            </table>
+
+            <table class="tpair, t34">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu" target="blank"><h3>Tome 4</h3></a></td></tr>
+            </table>
+
+            <table class="timpair, t56">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix" target="blank"><h3>Tome 5</h3></a></td></tr>
+            </table>
+
+            <table class="tpair, t56">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_Prince_de_Sang-M%C3%AAl%C3%A9" target="blank"><h3>Tome 6</h3></a></td></tr>
+            </table>
+
+            <table class="timpair, t78">
+                <tr><td><a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort" target="blank"><h3>Tome 7</h3></a></td></tr>
+            </table>
+
+		</div>
+
+        <img class="icon" id="home" src="ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('The Big Quiz Harry Potter.html')">
+        <img class="icon" id="music" src="ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let music_src = "ressources/music/Hedwig's Theme.mp3";
+        </script>
+
+        <script src="ressources/script/interactions.js"></script>
+        <script src="ressources/script/music.js"></script>
+
+        <script>
+
+            function music_play() {
+                music.play();
+                music_playing = true;
+                music_button.src = "ressources/images/music-on.png";
+                music_button.alt = "Musique ON";
+                music_button.title = "Désactiver la musique";
+            };
+
+            function music_stop() {
+                music.pause();
+                music_playing = false;
+                music_button.src = "ressources/images/music-off.png";
+                music_button.alt = "Musique OFF";
+                music_button.title = "Activer la musique";
+            };
+
+        </script>
+
+	</body>
+
+</html>
