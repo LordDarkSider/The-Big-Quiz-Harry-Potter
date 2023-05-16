@@ -39,49 +39,49 @@
                 <p class="quote">
                     <label>
                         “Etonnant ! Vraiment étonnant ! On dirait de la magie !”<br>
-                        <input type="text" id="v1" name="personnage 1" placeholder="Prénom Nom">
+                        <input type="text" id="v1" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Tu crois que... ça ne te dérangerait pas si... si je prenais une photo de toi ?”<br>
-                        <input type="text" id="v2" name="personnage 2" placeholder="Prénom Nom">
+                        <input type="text" id="v2" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Innocent tant qu'on n'a pas prouvé sa culpabilité.”<br>
-                        <input type="text" id="v3" name="personnage 3" placeholder="Prénom Nom">
+                        <input type="text" id="v3" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Potter, voilà encore une de tes ruses, Décidément, tuer les élèves, ça t'amuse...”<br>
-                        <input type="text" id="v4" name="personnage 4" placeholder="Nom">
+                        <input type="text" id="v4" placeholder="Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “La renommée est une amie bien peu fidèle.”<br>
-                        <input type="text" id="v5" name="personnage 5" placeholder="Prénom Nom">
+                        <input type="text" id="v5" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Vous l'avez tuée ! Et maintenant, c'est moi qui vais vous tuer !”<br>
-                        <input type="text" id="v6" name="personnage 6" placeholder="Prénom Nom">
+                        <input type="text" id="v6" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Ne jamais se fier à quelque chose capable d'agir et de penser tout seul si on ne vois pas où se trouve son cerveau.”<br>
-                        <input type="text" id="v7" name="personnage 7" placeholder="Prénom Nom">
+                        <input type="text" id="v7" placeholder="Prénom Nom">
                     </label>
                 </p>
                 
@@ -99,33 +99,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('12.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('14.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 7;
+            let music_src = "../ressources/music/HP2/Moaning Myrtle.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=7; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Moaning Myrtle.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

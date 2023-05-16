@@ -39,9 +39,9 @@
                 <p class="letter">
                 
                     <span class="alinea"></span>N'OUVREZ PAS LE PAQUET PENDANT QUE VOUS SEREZ À TABLE.<br>
-                    <span class="alinea"></span>Il contient votre nouveau <input type="text" id="v1" name="mot 1"> <input type="text" id="v2" name="mot 2">, mais je ne veux pas que tout le monde sache que vous avez votre propre <input type="text" id="v3" name="mot 3">. Sinon, les autres en voudront un aussi. Olivier <input type="text" id="v4" name="mot 4"> vous attend ce soir à sept heures sur le terrain de <input type="text" id="v5" name="mot 5"> pour votre première séance d'entraînement.<br>
+                    <span class="alinea"></span>Il contient votre nouveau <input type="text" id="v1"> <input type="text" id="v2">, mais je ne veux pas que tout le monde sache que vous avez votre propre <input type="text" id="v3">. Sinon, les autres en voudront un aussi. Olivier <input type="text" id="v4"> vous attend ce soir à sept heures sur le terrain de <input type="text" id="v5"> pour votre première séance d'entraînement.<br>
                     <br>
-                    <span class="alinea"></span>Professeur <input type="text" id="v6" name="mot 6">.
+                    <span class="alinea"></span>Professeur <input type="text" id="v6">.
                 
                 </p>
 
@@ -59,33 +59,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('03.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('05.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 6;
+            let music_src = "../ressources/music/HP1/Entry into the Great Hall and the Banquet.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=6; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP1/Entry into the Great Hall and the Banquet.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

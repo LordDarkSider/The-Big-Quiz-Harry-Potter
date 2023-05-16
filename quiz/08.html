@@ -39,14 +39,14 @@
                 <p class="letter">
                 
                     <span class="alinea"></span>Cher Mr Potter,<br>
-                    <span class="alinea"></span>Nous avons été informés qu'un sortilège de <input type="text" id="v1" name="mot 1"> a été utilisé dans votre lieu de résidence ce soir à neuf heures douze.<br>
-                    <span class="alinea"></span>Comme vous le savez, les sorciers de <input type="text" id="v2" name="mot 2"> <input type="text" id="v3" name="mot 3"> ne sont pas autorisés à jeter des sorts en dehors de l'école et toute récidive dans l'utilisation de tels sortilèges pourrait entraîner votre <input type="text" id="v4" name="mot 4"> de ladite école [...].<br>
-                    <span class="alinea"></span>Nous vous rappelons également que toute pratique de sorcellerie susceptible d'être remarquée par des membres de la communauté non magique (<input type="text" id="v5" name="mot 5">) constitue un délit puni par l'article 13 du code du secret établi par la Confédération internationale des mages et sorciers.<br>
-                    <span class="alinea"></span>En vous souhaitant d'agréables <input type="text" id="v6" name="mot 6">, nous vous prions de croire, cher Mr Potter, en l'assurance de nos sentiments distingués.<br>
+                    <span class="alinea"></span>Nous avons été informés qu'un sortilège de <input type="text" id="v1"> a été utilisé dans votre lieu de résidence ce soir à neuf heures douze.<br>
+                    <span class="alinea"></span>Comme vous le savez, les sorciers de <input type="text" id="v2"> <input type="text" id="v3"> ne sont pas autorisés à jeter des sorts en dehors de l'école et toute récidive dans l'utilisation de tels sortilèges pourrait entraîner votre <input type="text" id="v4"> de ladite école [...].<br>
+                    <span class="alinea"></span>Nous vous rappelons également que toute pratique de sorcellerie susceptible d'être remarquée par des membres de la communauté non magique (<input type="text" id="v5">) constitue un délit puni par l'article 13 du code du secret établi par la Confédération internationale des mages et sorciers.<br>
+                    <span class="alinea"></span>En vous souhaitant d'agréables <input type="text" id="v6">, nous vous prions de croire, cher Mr Potter, en l'assurance de nos sentiments distingués.<br>
                     <br>
-                    <span class="alinea"></span>Mafalda <input type="text" id="v7" name="mot 7"><br>
+                    <span class="alinea"></span>Mafalda <input type="text" id="v7"><br>
                     <span class="alinea"></span>Service des Usages abusifs de la Magie.<br>
-                    <span class="alinea"></span><input type="text" id="v8" name="mot 8"> de la Magie.<br>
+                    <span class="alinea"></span><input type="text" id="v8"> de la Magie.<br>
 
                 </p>
 
@@ -64,33 +64,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('07.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('09.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 8;
+            let music_src = "../ressources/music/HP2/Dobby the House Elf.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=8; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Dobby the House Elf.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

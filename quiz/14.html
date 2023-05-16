@@ -39,22 +39,22 @@
                 <p>
                     <label>
                         En quelle année est mort Sir Nicholas de Mimsy-Porpington ?<br>
-                        <input type="number" id="v1" name="question 1" min="0">
+                        <input type="number" id="v1" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Combien de temps faut-il pour préparer le Polynectar ?<br>
-                        <input type="number" id="v2" name="question 2.1" min="0">
-                        <select id="v3" name="question 2.2"><option value="">‎</option><option value="heure">heure(s)</option><option value="jour">jour(s)</option><option value="semaine">semaine(s)</option><option value="mois">mois</option><option value="année">année(s)</option></select>
+                        <input type="number" id="v2" min="0">
+                        <select id="v3" ><option value="">‎</option><option value="heure">heure(s)</option><option value="jour">jour(s)</option><option value="semaine">semaine(s)</option><option value="mois">mois</option><option value="année">année(s)</option></select>
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Quel est le mot de passe permettant d'accéder au bureau de Dumbledore durant l’année 1992-1993 (tome 2) ?<br>
-                        <input type="text" id="v4" name="question 3">
+                        <input type="text" id="v4">
                     </label>
                 </p>
                 
@@ -72,33 +72,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('13.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('15.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 4;
+            let music_src = "../ressources/music/HP2/Polyjuice Potion.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=4; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Polyjuice Potion.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

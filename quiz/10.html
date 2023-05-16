@@ -39,56 +39,56 @@
                 <p class="quote">
                     <label>
                         “Vraiment, vous l'avez fait voler ? Et elle a bien marché ? [...]”<br>
-                        <input type="text" id="v1" name="personnage 1" placeholder="Prénom Nom">
+                        <input type="text" id="v1" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Pas de vous tuer, Monsieur, surtout pas vous tuer ! [...] Mieux vaut qu'il rentre chez lui grièvement blessé plutôt que de rester ici, Monsieur !”<br>
-                        <input type="text" id="v2" name="personnage 2" placeholder="Nom">
+                        <input type="text" id="v2" placeholder="Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Qui peut me dire quelles sont les propriétés de la mandragore ?”<br>
-                        <input type="text" id="v3" name="personnage 3" placeholder="Nom">
+                        <input type="text" id="v3" placeholder="Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Mon cher Monsieur, soyez certain que je n'ai aucun plaisir à me trouver dans votre... heu... comment appelez-vous ça ? Une maison ?”<br>
-                        <input type="text" id="v4" name="personnage 4" placeholder="Prénom Nom">
+                        <input type="text" id="v4" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Tu prépares un ballet aérien, Potter ?”<br>
-                        <input type="text" id="v5" name="personnage 5" placeholder="Prénom Nom">
+                        <input type="text" id="v5" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “J'ai parlé une autre langue ? Je ne m'en suis pas rendu compte... Comment pourrais-je parler une autre langue sans m'en apercevoir ?”<br>
-                        <input type="text" id="v6" name="personnage 6" placeholder="Prénom Nom">
+                        <input type="text" id="v6" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Voldemort est à la fois mon passé, mon présent et mon avenir...”<br>
-                        <input type="text" id="v7" name="personnage 7" placeholder="Prénom Nom">
+                        <input type="text" id="v7" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Ce sont nos choix qui montrent ce que nous sommes vraiment, beaucoup plus que nos aptitudes.”<br>
-                        <input type="text" id="v8" name="personnage 8" placeholder="Prénom Nom">
+                        <input type="text" id="v8" placeholder="Prénom Nom">
                     </label>
                 </p>
                 
@@ -106,33 +106,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('09.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('11.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 8;
+            let music_src = "../ressources/music/HP2/Fawkes the Phoenix.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=8; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Fawkes the Phoenix.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

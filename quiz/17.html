@@ -21,7 +21,7 @@
             <h2>Défi n°17</h2>
 
             <p id="warning">
-                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_prisonnier_d%27Azkaban" target="_blank">tome 3</a> pour réussir ce défi..
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_prisonnier_d%27Azkaban" target="_blank">tome 3</a> pour réussir ce défi.
             </p>
 
             <p id="difficulty" title="1"></p> <!-- 1,2,3 ou 4 -->
@@ -38,35 +38,35 @@
 
                 <p>
                     <label>
-                        <input type="text" id="v1" name="cours 1" size="7" style="width: auto"><br>
+                        <input type="text" id="v1" size="7" style="width: auto"><br>
                         Pratique de divination reposant sur les propriétés magiques des nombres.
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        <input type="text" id="v2" name="cours 2" size="21" style="width: auto"><br>
+                        <input type="text" id="v2" size="21" style="width: auto"><br>
                         Étude de la faune magique.
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        <input type="text" id="v3" name="cours 3" size="12" style="width: auto"><br>
+                        <input type="text" id="v3" size="12" style="width: auto"><br>
                         Apprentissage du mode de vie Moldu.
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        <input type="text" id="v4" name="cours 4" maxlength="20" size="11" style="width: auto"><br>
+                        <input type="text" id="v4" maxlength="20" size="11" style="width: auto"><br>
                         Apprentissage des runes anciennes et de leurs propriétés divinatoires.
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        <input type="text" id="v5" name="cours 5" size="5" style="width: auto"><br>
+                        <input type="text" id="v5" size="5" style="width: auto"><br>
                         Branche de la magie qui consiste à tenter de prévoir l'avenir à travers divers rituels et outils.
                     </label>
                 </p>
@@ -85,33 +85,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('16.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('18.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 5;
+            let music_src = "../ressources/music/HP3/Hagrid the Professor.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=5; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP3/Hagrid the Professor.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

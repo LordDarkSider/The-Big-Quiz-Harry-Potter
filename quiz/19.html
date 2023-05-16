@@ -21,7 +21,7 @@
             <h2>Défi n°19</h2>
 
             <p id="warning">
-                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_prisonnier_d%27Azkaban" target="_blank">tome 3</a> pour réussir ce défi..
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_prisonnier_d%27Azkaban" target="_blank">tome 3</a> pour réussir ce défi.
             </p>
 
             <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
@@ -39,35 +39,35 @@
                 <p>
                     <label>
                         Où est partie Hermione pendant les vacances d'été 1993 (tome 3) ?<br>
-                        <input type="text" id="v1" name="question 1">
+                        <input type="text" id="v1">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Dans quel collège, Vernon prétend-il avoir envoyé Harry auprès de la tante Marge ?<br>
-                        <input type="text" id="v2" name="question 2" maxlength="10">
+                        <input type="text" id="v2" maxlength="10">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Dans quelle boutique de Pré-au-Lard aboutit le passage secret utilisé par Harry avec la carte du Maraudeur ?<br>
-                        <input type="text" id="v3" name="question 3">
+                        <input type="text" id="v3">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Qui a volé la liste des mots de passe de la salle commune de Gryffondor que Neville avait perdu ?<br>
-                        <input type="text" id="v4" name="question 4">
+                        <input type="text" id="v4">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Comment se nomme le bourreau qui doit exécuter Buck ?<br>
-                        <input type="text" id="v5" name="question 5" placeholder="Nom">
+                        <input type="text" id="v5" placeholder="Nom">
                     </label>
                 </p>
 
@@ -85,33 +85,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('18.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('20.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 5;
+            let music_src = "../ressources/music/HP3/Apparition on the Train.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=5; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP3/Apparition on the Train.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

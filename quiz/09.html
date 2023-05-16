@@ -39,21 +39,21 @@
                 <p>
                     <label>
                         Combien de Weasley y a-t-il à Poudlard durant l’année 1992-1993 (tome 2) ?<br>
-                        <input type="number" id="v1" name="question 1" min="0">
+                        <input type="number" id="v1" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Qui reçoit Mr Malefoy dans la boutique d’accessoires consacrés à la magie noire située dans l'Allée des Embrumes ?<br>
-                        <input type="text" id="v2" name="question 2" placeholder="Nom de famille">
+                        <input type="text" id="v2" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Quel sortilège (formule) lance Rogue à Lockhart lors de l'ouverture du club de duel ?<br>
-                        <input type="text" id="v3" name="question 3" placeholder="formule">
+                        <input type="text" id="v3" placeholder="formule">
                     </label>
                 </p>
 
@@ -71,33 +71,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('08.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('10.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 3;
+            let music_src = "../ressources/music/HP2/Knockturn Alley.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=3; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Knockturn Alley.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

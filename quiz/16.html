@@ -21,7 +21,7 @@
             <h2>Défi n°16</h2>
 
             <p id="warning">
-                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets" target="_blank">tome 2</a> pour réussir ce défi..
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Chambre_des_Secrets" target="_blank">tome 2</a> pour réussir ce défi.
             </p>
 
             <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
@@ -39,14 +39,14 @@
                 <p>
                     <label>
                         Quelle est la marque de la voiture volante d’Arthur Weasley ?<br>
-                        <input type="text" id="v1" name="question 1">
+                        <input type="text" id="v1">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Quel est l’un des ingrédients nécessaires à la fabrication du Polynectar ne se trouvant que dans la réserve de Rogue ?<br>
-                        <select id="v2" name="question 2">
+                        <select id="v2" >
                             <option value="">‎</option><option value="sysymbre">sysymbre</option><option value="corne de bicorne">corne de bicorne</option><option value="mandragore">mandragore</option><option value="touffes de polygonum">touffes de polygonum</option><option value="chrysopes">chrysopes</option><option value="sangsues">sangsues</option><option value="bézoard">bézoard</option>
                         </select>
                     </label>
@@ -55,7 +55,7 @@
                 <p>
                     <label>
                         Quel étudiant de Poudlard avait sugéré que Tom Jedusor était un meurtrier avant même de le savoir ?<br>
-                        <input type="text" id="v3" name="question 3" placeholder="Prénom Nom">
+                        <input type="text" id="v3" placeholder="Prénom Nom">
                     </label>
                 </p>
                 
@@ -73,33 +73,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('15.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('17.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 3;
+            let music_src = "../ressources/music/HP2/Meeting Aragog.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=3; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Meeting Aragog.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

@@ -39,49 +39,49 @@
                 <p class="quote">
                     <label>
                         “Il faut beaucoup de bravoure pour faire face à ses ennemis mais il n'en faut pas moins pour affronter ses amis.”<br>
-                        <input type="text" id="v1" name="personnage 1" placeholder="Nom de famille">
+                        <input type="text" id="v1" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “On aurait pu se faire tuer, ou pire, être renvoyés. Et maintenant, si ça ne vous dérange pas, je vais me coucher.”<br>
-                        <input type="text" id="v2" name="personnage 2" placeholder="Nom de famille">
+                        <input type="text" id="v2" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Souvenez-vous, c'est la baguette qui choisit son sorcier, pas le contraire...”<br>
-                        <input type="text" id="v3" name="personnage 3" placeholder="Nom de famille">
+                        <input type="text" id="v3" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Je suis un quoi ?”<br>
-                        <input type="text" id="v4" name="personnage 4" placeholder="Nom de famille">
+                        <input type="text" id="v4" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Un troll... dans les cachots... je voulais vous prévenir...”<br>
-                        <input type="text" id="v5" name="personnage 5" placeholder="Nom de famille">
+                        <input type="text" id="v5" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Trente-six ! Ça fait deux de moins que l'année dernière.”<br>
-                        <input type="text" id="v6" name="personnage 6" placeholder="Nom de famille">
+                        <input type="text" id="v6" placeholder="Nom de famille">
                     </label>
                 </p>
 
                 <p class="quote">
                     <label>
                         “Il n'y a pas de bien ni de mal, il n'y a que le pouvoir, et ceux qui sont trop faibles pour le rechercher...”<br>
-                        <input type="text" id="v7" name="personnage 7" placeholder="Nom de famille">
+                        <input type="text" id="v7" placeholder="Nom de famille">
                     </label>
                 </p>
 
@@ -99,33 +99,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('02.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('04.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 7;
+            let music_src = "../ressources/music/HP1/Diagon Alley and the Gringotts Vault.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=7; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP1/Diagon Alley and the Gringotts Vault.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

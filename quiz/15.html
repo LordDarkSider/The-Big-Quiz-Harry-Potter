@@ -38,25 +38,25 @@
 
                 <p>
                     <label>
-                        • 1ère attaque ⟶ <input type="text" id="v1" name="personnage 1" maxlength="25">
+                        • 1ère attaque ⟶ <input type="text" id="v1" maxlength="25">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        • 2ème attaque ⟶ <input type="text" id="v2" name="personnage 2" maxlength="25">
+                        • 2ème attaque ⟶ <input type="text" id="v2" maxlength="25">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        • 3ème attaque ⟶ <input type="text" id="v3" name="personnage 3" maxlength="25"> et <input type="text" id="v4" name="personnage 4" maxlength="25">
+                        • 3ème attaque ⟶ <input type="text" id="v3" maxlength="25"> et <input type="text" id="v4" maxlength="25">
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        • 4ème attaque ⟶ <input type="text" id="v5" name="personnage 5" maxlength="25"> et <input type="text" id="v6" name="personnage 6" maxlength="25">
+                        • 4ème attaque ⟶ <input type="text" id="v5" maxlength="25"> et <input type="text" id="v6" maxlength="25">
                     </label>
                 </p>
 
@@ -76,33 +76,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('14.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('16.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 6;
+            let music_src = "../ressources/music/HP2/Meeting Tom Riddle.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=6; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Meeting Tom Riddle.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

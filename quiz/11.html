@@ -39,21 +39,21 @@
                 <p>
                     <label>
                         Quel est la première personne que croisent Harry et Ron lorsqu'ils arrivent à Poudlard pour leur deuxième année ?<br>
-                        <input type="text" id="v1" name="question 1" placeholder="Prénom Nom">
+                        <input type="text" id="v1" placeholder="Prénom Nom">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         De combien d'années Harry Potter remonte-t-il le temps grâce au journal de Jedusor ?<br>
-                        <input type="number" id="v2" name="question 2" min="0">
+                        <input type="number" id="v2" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Hormis les propriétés curatives de leurs larmes, quel autre pouvoir possède le Phénix ?<br>
-                        <select id="v3" name="question 3">
+                        <select id="v3" >
                             <option value="">‎</option><option value="assourdir">Rendre sourd ceux qui entendent son chant</option><option value="transformer">Transformer un sorcier en animal</option><option value="prédire">Voir l’avenir</option><option value="porter">Porter des charges lourdes</option><option value="pétrifier">Pétrifier ceux qui le regarde</option><option value="feu">Cracher du feu</option><option value="apaiser">Apaiser la colère</option>
                         </select>
                     </label>
@@ -73,33 +73,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('10.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('12.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
+        <script>
+            let nb_fields = 3;
+            let music_src = "../ressources/music/HP2/Gilderoy Lockhart.mp3";
+        </script>
         <script src="../ressources/script/difficulty.js"></script>
         <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
         <script src="../ressources/script/links_easter_eggs.js"></script>
-
-        <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=3; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
-            let music_src = "../ressources/music/HP2/Gilderoy Lockhart.mp3";
-
-        </script>
-
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 

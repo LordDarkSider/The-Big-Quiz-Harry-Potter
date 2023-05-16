@@ -39,21 +39,21 @@
                 <p>
                     <label>
                         La famille Dursley vit à Privet Drive, à quel numéro exactement ?<br>
-                        <input type="number" id="v1" name="question 1" min="0">
+                        <input type="number" id="v1" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Combien y a-t-il de joueurs dans un match de Quidditch ?<br>
-                        <input type="number" id="v2" name="question 2" min="0">
+                        <input type="number" id="v2" min="0">
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Combien de points Dumbledore accorde-t-il à Neville lors du banquet de fin d'année ?<br>
-                        <input type="number" id="v3" name="question 3" min="0">
+                        <input type="number" id="v3" min="0">
                     </label>
                 </p>
 
@@ -71,32 +71,21 @@
 
 		</div>
 
-        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../The Big Quiz Harry Potter.html')">
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
         <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('02.html')">
         <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
 
 
 
-        <script src="../ressources/script/difficulty.js"></script>
-        <script src="../ressources/script/keys.js"></script>
-        <script src="../ressources/script/calcul.js"></script>
-        <script src="../ressources/script/links_easter_eggs.js"></script>
-
         <script>
-
-            let key = document.getElementById("key");
-            let fields = [];
-            for(let k=1; k<=3; k++){fields.push(document.getElementById("v"+String(k)))}
-
-            function change_key() {
-                x = code(fields.map(f => f.value));
-                key.innerHTML = get_key(x);
-            }
-
+            let nb_fields = 3;
             let music_src = "../ressources/music/HP1/The Arrival of Baby Harry.mp3";
-
         </script>
         
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
         <script src="../ressources/script/interactions.js"></script>
         <script src="../ressources/script/music.js"></script>
 
