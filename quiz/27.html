@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°27 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°27, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2027 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°27</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu" target="_blank">tome 4</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Qui a dit...
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p class="quote">
+                    <label>
+                        “Endormir la douleur pendant quelque temps ne la rendra que plus intense lorsque tu la sentiras à nouveau.”<br>
+                        <input type="text" id="v1" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Vigilance Constante !”<br>
+                        <input type="text" id="v2" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Si tu veux savoir ce que vaut un homme, regarde donc comment il traite ses inférieurs, pas ses égaux.”<br>
+                        <input type="text" id="v3" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Il est nécessaire de comprendre la réalité avant de pouvoir l'accepter et seule l'acceptation de la réalité peut permettre la guérison.”<br>
+                        <input type="text" id="v4" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “D’ailleurs, si on veut vraiment s’amuser, il faut bien qu’il y ait un peu de risques.”<br>
+                        <input type="text" id="v5" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Seigneur ! Qu’avez-vous donc vendu pour obtenir des places dans la tribune officielle ? Votre maison n’aurait certainement pas suffi à payer le prix des billets ?”<br>
+                        <input type="text" id="v6" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Des périodes comme celles-là [Première guerre des sorciers] peuvent inciter les uns au meilleur et les autres au pire.”<br>
+                        <input type="text" id="v7" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('27')" title="Télécharger l'Easter egg">Easter egg n°27</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu_(film)" target="_blank">film du tome 4</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('26.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('28.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 7;
+            let music_src = "../ressources/music/HP4/Hogwart's Hymn.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

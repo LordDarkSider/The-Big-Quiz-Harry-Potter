@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°28 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°28, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°28</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu" target="_blank">tome 4</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Répondre aux questions.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p>
+                    <label>
+                        Contre quelle équipe l'Angleterre s'est faite éliminer à la Coupe du Monde de Quidditch de 1994 ?<br>
+                        <input type="text" id="v1">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Combien de BUSE avait obtenu Bartemius Croupton Jr. à Poudlard ?<br>
+                        <input type="number" id="v2">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Quel Mangemort a mutilé Alastor Maugrey au combat pendant la Première guerre des sorciers ?<br>
+                        <input type="text" id="v3" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Lors de la troisième tâche, avec combien de points Harry et Cédric étaient à ex æquo ?<br>
+                        <input type="number" id="v4">
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('28')" title="Télécharger l'Easter egg">Easter egg n°28</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu_(film)" target="_blank">film du tome 4</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('28.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('29.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 4;
+            let music_src = "../ressources/music/HP4/Frank Dies.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°22 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°22, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°22</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu" target="_blank">tome 4</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="1"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Compléter la lettre à trous.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p class="letter">
+                    
+                    <span class="alinea"></span>Cher <input type="text" id="v1">,<br>
+                    <span class="alinea"></span>Merci pour ta dernière lettre. Cet oiseau était énorme, il a eu du mal à se glisser à travers ma fenêtre.<br>
+                    <span class="alinea"></span>Ici, c’est comme d’habitude. Le <input type="text" id="v2"> de Dudley se passe assez mal. Hier, ma <input type="text" id="v2"> l’a surpris en train d’emporter en douce des beignets dans sa chambre. [...]<br>
+                    <span class="alinea"></span>Pour moi, les choses vont bien, surtout parce que les <input type="text" id="v3"> sont terrifiés à l’idée que tu puisses revenir et les <input type="text" id="v4"> en chauves-souris si je te le demande.<br>
+                    <span class="alinea"></span>Il s’est quand même passé quelque chose de bizarre ce matin. Ma <input type="text" id="v5"> a recommencé à me faire mal. La dernière fois que ça s’est produit, c’était parce que <input type="text" id="v6"> était à Poudlard. Mais je ne pense pas qu’il puisse se trouver près de chez moi en ce moment, qu’est-ce que tu en penses ? Est-ce que tu sais si les <input type="text" id="v7"> provoquées par un mauvais <input type="text" id="v8"> peuvent encore faire mal des années plus tard ?<br>
+                    <span class="alinea"></span>J’enverrai <input type="text" id="v9"> te porter cette lettre quand elle reviendra. Elle est partie chasser pour le moment. Dis bonjour à <input type="text" id="v10"> de ma part.
+                    
+                </p>
+                <p>
+                    Harry
+                </p>
+                <p class="letter">
+                    PS : Si tu veux me joindre, je serai chez mon ami <input type="text" id="v11"> <input type="text" id="v12"> jusqu’à la fin des vacances. Son père a réussi à nous avoir des billets pour la <input type="text" id="v13"> du <input type="text" id="v14"> de <input type="text" id="v15"> !
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('22')" title="Télécharger l'Easter egg">Easter egg n°22</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_la_Coupe_de_Feu_(film)" target="_blank">film du tome 4</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('21.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('23.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 15;
+            let music_src = "../ressources/music/HP4/Sirius Fire.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
