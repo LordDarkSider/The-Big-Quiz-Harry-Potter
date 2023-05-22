@@ -26,5 +26,11 @@ let links_easter_eggs = new Map([
     ["25", "https://drive.google.com/file/d/1AynBD8kF2LifmdQZa5mfNmyQ_7xxY-2o/"],
     ["26", "https://drive.google.com/file/d/1Bl-x4vQLHL1OJEkamdJNL_db6eh715Ap/"],
     ["27", "https://drive.google.com/file/d/1DjWeu71x8CHs9lIG38cqzikpogt1rL_q/"],
-    ["28", "https://drive.google.com/file/d/1-LJMn_P7r4NiPQPvDWNhSPgzmiH_SD_x/"]
+    ["28", "https://drive.google.com/file/d/1-LJMn_P7r4NiPQPvDWNhSPgzmiH_SD_x/"],
+    ["29", "https://drive.google.com/file/d/1gnWyvExo7wRu7X6Hm9TrCBhM6VsvjQcs/"],
+    ["30", "https://drive.google.com/file/d/1lXQr6lC6qDNIsBQrQdB8v8urjKwZPY78/"],
+    ["31", "https://drive.google.com/file/d/1tDVyRFcHbFs6VAqTyXAQ-adQ7fHJ2iYb/"],
+    ["32", "https://drive.google.com/file/d/1Yx6LAtl5MkuTnTTcHztiGKBtBu8W5-ZQ/"],
+    ["33", "https://drive.google.com/file/d/1lcsz3GxIwqhaCvcjp_62dk1ROzCvRWes/"],
+    ["34", "https://drive.google.com/file/d/1WjXaCLlGrDn_2zu0kVsLX8JIYxLPsrts/"]
 ]);
