@@ -19,6 +19,6 @@ function correction(values){
 
 //Afficher correction (lien)
 if(location.search.substring(1,12)=="correction=") {
-    correction(decodeURI(location.search.substring(12)).split(','));
+    correction(decodeURI(location.search.substring(12)).split(';'));
     change_key();
 }
