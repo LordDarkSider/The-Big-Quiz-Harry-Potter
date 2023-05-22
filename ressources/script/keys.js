@@ -96,7 +96,7 @@ let keys = [
     "BRANCHIFLORE",
     "STRANGULOT",
     "GRINGOTTS",
-    "SOMBRALS",
+    "SOMBRAL",
     "INFERI",
     "QUIDDITCH"
 ]
