@@ -39,8 +39,15 @@ function get_key(x){
 }
 
 
+//Renvoie la valeur d'un champ selon son type
+function get_fieldValue(f){
+    if(f.type == "radio"){field = document.querySelector("input[name="+f.name+"]:checked"); if(field != null){return field.value;} else {return "";}}
+    else{return f.value;}
+}
+
+
 //Change la clé affichée
 function change_key() {
-    x = code(fields.map(f => f.value));
+    x = code(fields.map(f => get_fieldValue(f) ));
     key.innerHTML = get_key(x);
-} 
+}

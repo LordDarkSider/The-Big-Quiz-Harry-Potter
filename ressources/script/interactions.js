@@ -1,5 +1,5 @@
 function go_to(link){
-    if(music_playing){document.location.href = link+"?music"}
+    if( typeof(music_playing) != 'undefined' && music_playing){document.location.href = link+"?music"}
     else{document.location.href = link}
 }
 
@@ -11,7 +11,9 @@ function easter_egg(num){
 
 function correction(values){
     for (var i = 0; i < fields.length; i++) {
-        fields[i].value = values[i];
+        f = fields[i];
+        if(f.type == "radio"){document.querySelectorAll("input[name="+f.name+"]")[parseInt(values[i])-1].checked = true;}
+        else {f.value = values[i];}
     }
 }
 
