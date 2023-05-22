@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°32 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°32, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°32</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix" target="_blank">tome 5</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Qui a dit...
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p class="quote">
+                    <label>
+                        “Il serait temps que tu apprennes à faire la différence entre la vie et les rêves [...]”<br>
+                        <input type="text" id="v1" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Ce n’est pas parce que tu as la capacité émotionnelle d’une cuillère à café qu’il en va de même pour tout le monde.”<br>
+                        <input type="text" id="v2" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Voyez-vous, monsieur le ministre, il y a bien des sujets sur lesquels je suis en désaccord avec Dumbledore... Mais il faut lui reconnaître qu’il ne manque pas de style.”<br>
+                        <input type="text" id="v3" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Ne t’inquiète pas, tu es aussi sain d’esprit que moi.”<br>
+                        <input type="text" id="v4" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “J’ai hâte de vous connaître tous et je suis sûre que nous deviendrons vite de très bons amis !”<br>
+                        <input type="text" id="v5" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “La jeunesse ne peut savoir ce que pense et ressent le vieil âge. Mais les hommes âgés deviennent coupables s’ils oublient ce que signifiait être jeune.”<br>
+                        <input type="text" id="v6" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Aussi, n’hésitons pas à entrer dans une ère nouvelle d’ouverture, d’efficacité, de responsabilité, avec la volonté de préserver ce qui doit être préservé, d’améliorer ce qui doit être amélioré, et de tailler dans le vif chaque fois que nous serons confrontés à des pratiques dont l’interdiction s’impose.”<br>
+                        <input type="text" id="v7" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Le moment est venu d’exercer nos talents dans le monde réel.”<br>
+                        <input type="text" id="v8" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Les pensées ne sont pas un livre qu’on ouvre et qu’on peut feuilleter tout à loisir. [...] L’esprit est une chose complexe qui comporte de nombreuses couches successives [...]”<br>
+                        <input type="text" id="v9" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('32')" title="Télécharger l'Easter egg">Easter egg n°32</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix_(film)" target="_blank">film du tome 5</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('31.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('33.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 9;
+            let music_src = "../ressources/music/HP5/Dumbledore's Army.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

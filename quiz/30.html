@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°30 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°30, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°30</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix" target="_blank">tome 5</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="2"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Indiquer si les personnages font partis de l'Armée de Dumbledore, de la Brigade inquisitoriale ou de ni l'un ni l'autre.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <table>
+
+                    <thead> <td></td> <td>Armée de Dumbledore</td> <td>Brigade inquisitoriale</td> <td>ni l'un ni l'autre</td> </thead>
+                    
+                    <tr> <td>Susan Bones</td> <td><input type="radio" id="v1" name="p1" value="AD"></td> <td><input type="radio" id="v1" name="p1" value="BI"></td> <td><input type="radio" id="v1" name="p1" value="nla"></td> </tr>
+                    <tr> <td>Millicent Bulstrode</td> <td><input type="radio" id="v2" name="p2" value="AD"></td> <td><input type="radio" id="v2" name="p2" value="BI"></td> <td><input type="radio" id="v2" name="p2" value="nla"></td> </tr>
+                    <tr> <td>Cho Chang</td> <td><input type="radio" id="v3" name="p3" value="AD"></td> <td><input type="radio" id="v3" name="p3" value="BI"></td> <td><input type="radio" id="v3" name="p3" value="nla"></td> </tr>
+                    <tr> <td>Roger Davies</td> <td><input type="radio" id="v4" name="p4" value="AD"></td> <td><input type="radio" id="v4" name="p4" value="BI"></td> <td><input type="radio" id="v4" name="p4" value="nla"></td> </tr>
+                    <tr> <td>Seamus Finnigan</td> <td><input type="radio" id="v5" name="p5" value="AD"></td> <td><input type="radio" id="v5" name="p5" value="BI"></td> <td><input type="radio" id="v5" name="p5" value="nla"></td> </tr>
+                    <tr> <td>Marcus Flint</td> <td><input type="radio" id="v6" name="p6" value="AD"></td> <td><input type="radio" id="v6" name="p6" value="BI"></td> <td><input type="radio" id="v6" name="p6" value="nla"></td> </tr>
+                    <tr> <td>Anthony Goldstein</td> <td><input type="radio" id="v7" name="p7" value="AD"></td> <td><input type="radio" id="v7" name="p7" value="BI"></td> <td><input type="radio" id="v2" name="p7" value="nla"></td> </tr>
+                    <tr> <td>Angelina Johnson</td> <td><input type="radio" id="v8" name="p8" value="AD"></td> <td><input type="radio" id="v8" name="p8" value="BI"></td> <td><input type="radio" id="v8" name="p8" value="nla"></td> </tr>
+                    <tr> <td>Graham Montague</td> <td><input type="radio" id="v9" name="p9" value="AD"></td> <td><input type="radio" id="v9" name="p9" value="BI"></td> <td><input type="radio" id="v9" name="p9" value="nla"></td> </tr>
+                    <tr> <td>Theodore Nott</td> <td><input type="radio" id="v10" name="p10" value="AD"></td> <td><input type="radio" id="v10" name="p10" value="BI"></td> <td><input type="radio" id="v10" name="p10" value="nla"></td> </tr>
+                    <tr> <td>Pansy Parkinson</td> <td><input type="radio" id="v11" name="p11" value="AD"></td> <td><input type="radio" id="v11" name="p11" value="BI"></td> <td><input type="radio" id="v11" name="p11" value="nla"></td> </tr>
+                    <tr> <td>Severus Rogue</td> <td><input type="radio" id="v12" name="p12" value="AD"></td> <td><input type="radio" id="v12" name="p12" value="BI"></td> <td><input type="radio" id="v12" name="p12" value="nla"></td> </tr>
+                    <tr> <td>Argus Rusard</td> <td><input type="radio" id="v13" name="p13" value="AD"></td> <td><input type="radio" id="v13" name="p13" value="BI"></td> <td><input type="radio" id="v13" name="p13" value="nla"></td> </tr>
+                    <tr> <td>Zacharias Smith</td> <td><input type="radio" id="v14" name="p14" value="AD"></td> <td><input type="radio" id="v14" name="p14" value="BI"></td> <td><input type="radio" id="v14" name="p14" value="nla"></td> </tr>
+                    <tr> <td>Percy Weasley</td> <td><input type="radio" id="v15" name="p15" value="AD"></td> <td><input type="radio" id="v15" name="p15" value="BI"></td> <td><input type="radio" id="v15" name="p15" value="nla"></td> </tr>
+
+                </table>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('30')" title="Télécharger l'Easter egg">Easter egg n°30</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix_(film)" target="_blank">film du tome 5</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('29.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('31.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 15;
+            let music_src = "../ressources/music/HP5/The Room of Requirement.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

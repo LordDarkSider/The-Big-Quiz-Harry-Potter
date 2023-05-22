@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°33 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°33, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°33</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix" target="_blank">tome 5</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Trouver les mois des évènements de l’année 1995-1996 (tome 5).
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p>
+                    <label>
+                        • Évasion massive de Mangemorts à Azkaban. ⟶
+                        <select id="v1" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Fondation de l'Armée de Dumbledore. ⟶
+                        <select id="v2" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Audience disciplinaire de Harry devant le Magenmagot. ⟶
+                        <select id="v3" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Dolores Ombrage, est nommée Grande Inquisitrice de Poudlard par le ministère de la Magie. ⟶
+                        <select id="v4" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Dolores Ombrage est nommée directrice de Poudlard après la fuite de Dumbledore. ⟶
+                        <select id="v5" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry et Dudley sont attaqués par des Détraqueurs à Little Whinging. ⟶
+                        <select id="v6" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Arthur Weasley est attaqué par Nagini au Département des mystères. ⟶
+                        <select id="v7" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Bataille du Département des mystères. ⟶
+                        <select id="v8" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('33')" title="Télécharger l'Easter egg">Easter egg n°33</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix_(film)" target="_blank">film du tome 5</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('32.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('34.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 8;
+            let music_src = "../ressources/music/HP5/Fireworks.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

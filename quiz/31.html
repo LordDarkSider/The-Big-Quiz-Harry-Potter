@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°31 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°31, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°31</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix" target="_blank">tome 5</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Répondre aux questions.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p>
+                    <label>
+                        Qui est Drago Malefoy pour Sirius Black ?<br>
+                        <select id="v1" >
+                            <option value="">‎</option><option value="petit-fils">petit-fils</option><option value="neveu">neveu</option><option value="petit-neveu">petit-neveu</option><option value="oncle">oncle</option><option value="cousin germain">cousin germain</option><option value="cousin germain éloigné au 1er degré">cousin germain éloigné au 1er degré</option><option value="cousin germain éloigné au 2ème degré">cousin germain éloigné au 2ème degré</option><option value="cousin issu de germain">cousin issu de germain</option><option value="filleul">filleul</option><option value="ami">ami</option>
+                        </select>
+                    </label>
+                    <br><br>(Si vous n'aimez pas ce genre de question, cliquez <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/a/aa/Cousin-fr.png">ici</a> pour un coup de pouce.)<br><br>
+                </p>
+
+                <p>
+                    <label>
+                        À quoi correspond l'acronyme "BUSE" ?<br>
+                        <input type="text" size="35" style="width: auto" id="v2">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Quel membre a trahi l'A.D. ?<br>
+                        <input type="text" id="v3" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Comment Graup appelle-t-il Hermione ?<br>
+                        <input type="text" id="v4">
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('31')" title="Télécharger l'Easter egg">Easter egg n°31</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_l%27Ordre_du_Ph%C3%A9nix_(film)" target="_blank">film du tome 5</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('30.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('32.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 4;
+            let music_src = "../ressources/music/HP5/Professor Umbridge.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
