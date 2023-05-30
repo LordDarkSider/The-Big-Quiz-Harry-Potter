@@ -77,7 +77,7 @@ let keys = [
     "STUPEFIX",
     "MANGEMORT",
     "PENSINE",
-    "BALAIS",
+    "BALAI",
     "BEUGLANTE",
     "BOMBABOUSE",
     "CAPE",
