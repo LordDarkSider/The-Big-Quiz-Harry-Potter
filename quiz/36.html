@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°36 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°36, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°36</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_Prince_de_Sang-M%C3%AAl%C3%A9" target="_blank">tome 6</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="2"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Compléter le parchemin des résultats de Harry Potter aux BUSE.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()" style="font-style: italic;">
+
+                <p>
+
+                    <p>
+                        BREVET UNIVERSEL<br>
+                        DE SORCELLERIE ÉLÉMENTAIRE
+                    </p>
+
+                    <table style="width: 50%; margin: auto;">
+
+                        <tr style="text-align: justify;">
+                            <td>Le candidat est admis s’il obtient l’une des notes suivantes :</td>
+                            <td>Le candidat est recalé s’il obtient l’une des notes suivantes :</td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: left;"><label><input type="text" id="v1"> (O)</label></td>
+                            <td style="text-align: right;"><label><input type="text" id="v4"> (P)</label></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: left;"><label><input type="text" id="v2"> (E)</label></td>
+                            <td style="text-align: right;"><label><input type="text" id="v5"> (D)</label></td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: left;"><label><input type="text" id="v3"> (A)</label></td>
+                            <td style="text-align: right;"><label><input type="text" id="v6"> (T)</label></td>
+                        </tr>
+
+                    </table>
+
+                </p>
+
+                <p>
+
+                    <p><br>HARRY JAMES POTTER A OBTENU :</p>
+
+                    <table style="width: fit-content; margin: auto; text-align: left;">
+                        <tr> <td>Astronomie :</td> <td><input type="text" id="v7" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Soins aux créatures magiques :</td> <td><input type="text" id="v8" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Sortilèges :</td> <td><input type="text" id="v9" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Défense contre les forces du Mal :</td> <td><input type="text" id="v10" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Divination :</td> <td><input type="text" id="v11" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Botanique :</td> <td><input type="text" id="v12" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Histoire de la magie :</td> <td><input type="text" id="v13" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Potions :</td> <td><input type="text" id="v14" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                        <tr> <td>Métamorphose :</td> <td><input type="text" id="v15" maxlength="1" size="1" style="width: auto; text-align: center;" ></td> </tr>
+                    </table>
+
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('36')" title="Télécharger l'Easter egg">Easter egg n°36</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_Prince_de_Sang-M%C3%AAl%C3%A9_(film)" target="_blank">film du tome 6</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('35.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('37.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 15;
+            let music_src = "../ressources/music/HP6/The Book.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

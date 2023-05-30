@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°39 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°39, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°39</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_Prince_de_Sang-M%C3%AAl%C3%A9" target="_blank">tome 6</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Trouver les mois des évènements de l’année 1996-1997 (tome 6)
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p>
+                    <label>
+                        • Gryffondor remporte la Coupe de Quidditch pour la troisième fois de suite. ⟶
+                        <select id="v1" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Katie Bell manque de mourir après avoir touché le collier d'opale ensorcelé. ⟶
+                        <select id="v2" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Rufus Scrimgeour succède à Cornelius Fudge au poste de ministre de la magie. ⟶
+                        <select id="v3" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Premières leçons de transplanage pour les sixième années. ⟶
+                        <select id="v4" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Bataille de la tour d'astronomie et assassinat d'Albus Dumbledore. ⟶
+                        <select id="v5" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry parvient à soutirer le souvenir de Slughorn et découvre l'existence des horcruxes de Voldemort. ⟶
+                        <select id="v6" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Ron est empoisonné par l'hydromel de Slughorn et est sauvé in extremis par Harry. ⟶
+                        <select id="v7" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        • Harry blesse gravement Malefoy en lançant Sectumsempra. ⟶
+                        <select id="v8" >
+                            <option value="">‎</option><option value="juillet">juillet</option><option value="août">août</option><option value="septembre">septembre</option><option value="octobre">octobre</option><option value="novembre">novembre</option><option value="décembre">décembre</option><option value="janvier">janvier</option><option value="février">février</option><option value="mars">mars</option><option value="avril">avril</option><option value="mai">mai</option><option value="juin">juin</option>
+                        </select>
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('39')" title="Télécharger l'Easter egg">Easter egg n°39</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_le_Prince_de_Sang-M%C3%AAl%C3%A9_(film)" target="_blank">film du tome 6</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('38.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('40.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 8;
+            let music_src = "../ressources/music/HP6/Ginny.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
