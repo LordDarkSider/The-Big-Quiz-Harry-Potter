@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°47 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°47, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°47</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort" target="_blank">tome 7</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Retrouver les victimes lors de la bataille de Poudlard (alliés de Harry Potter ou de Voldemort) <u>connues dans les livres</u>.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="auto_replace(); change_key()">
+
+                <p>
+                    Les noms des personnages sont rangés par ordre alphabétique
+                    <br><br>
+                </p>
+
+                <table>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield1"></td> <td>tué(e) par</td> <td id="autofield2"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield3"></td> <td>tué(e) par</td> <td id="autofield4"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield5"></td> <td>tué(e) par</td> <td id="autofield6"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield7"></td> <td>tué(e) par</td> <td id="autofield8"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield9"></td> <td>tué(e) par</td> <td id="autofield10"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield11"></td> <td>tué(e) par</td> <td id="autofield12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield13"></td> <td>tué(e) par</td> <td id="autofield14"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield15"></td> <td>tué(e) par</td> <td id="autofield16"></td>
+                    </tr>
+
+                    <tr>
+                        <td>💀</td> <td id="autofield17"></td> <td>tué(e) par</td> <td id="autofield18"></td> <td>et</td> <td id="autofield19"></td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('47')" title="Télécharger l'Easter egg">Easter egg n°47</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_1%C3%A8re_partie" target="_blank"> film de la 1ère partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('45.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('47.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 19;
+            let music_src = "../ressources/music/HP7/Lily's Theme.mp3";
+
+            //Ajout des select
+            var f = document.getElementById('data');
+            select_values = ["Blaise Zabini", "Corban Yaxley", "Ron Weasley", "Percy Weasley", "Molly Weasley", "George Weasley", "Ginny Weasley", "Fred Weasley", "Charlie Weasley", "Bill Weasley", "Arthur Weasley", "Lord Voldemort", "Sibylle Trelawney", "Travers", "Ted Tonks", "Andromeda Tonks", "Nymphadora Tonks", "Dean Thomas", "Pius Thicknesse", "Alicia Spinnet", "Zacharias Smith", "Horace Slughorn", "Rita Skeeter", "Kingsley Shacklebolt", "Rufus Scrimgeour", "Argus Rusard", "Augustus Rookwood", "Severus Rogue", "Quirinus Quirrell", "James Potter", "Harry Potter", "Peter Pettigrow", "Peeves", "Parvati Patil", "Padma Patil", "Pansy Parkinson", "Garrick Ollivander", "Rionach O'Neal", "Nagini", "Minerva McGonagall", "Alastor Maugrey", "Narcissa Malefoy", "Lucius Malefoy", "Drago Malefoy", "Walden Macnair", "Ernie Macmillan", "Remus Lupin", "Luna Lovegood", "Neville Londubat", "Augusta Londubat", "Gilderoy Lockhart", "Rodolphus Lestrange", "Rabastan Lestrange", "Bellatrix Lestrange", "Kreattur", "Lee Jordan", "Angelina Johnson", "Rubeus Hagrid", "Gripsec", "Gellert Grindelwald", "Fenrir Greyback", "Graup", "Hermione Granger", "Gregory Goyle", "Anthony Goldstein", "Mimi Geignarde", "Cornelius Fudge", "Filius Flitwick", "Firenze", "Seamus Finnigan", "Justin Finch-Fletchley", "Lily Evans", "Marietta Edgecombe", "Vernon Dursley", "Pétunia Dursley", "Dudley Dursley", "Albus Dumbledore", "Abelforth Dumbledore", "Olivier Dubois", "Antonin Dolohov", "Dobby", "Cédric Diggory", "Fleur Delacour", "Bartemius Croupton", "Dennis Crivey", "Colin Crivey", "Vincent Crabbe", "Michael Corner", "Pomona Chourave", "Cho Chang", "Amycus Carrow", "Alecto Carrow", "Buck", "Lavande Brown", "Susan Bones", "Sirius Black", "Katie Bell", "Aragog", "Hannah Abbot", "Inconnu"];
+            var select = document.createElement('select');
+            select.options[0] = new Option("‎", "");
+            while(select_values.length){
+                    var val = select_values.pop();
+                    select.options[select.options.length] = new Option(val, val);
+            }
+            for(let k=1; k<=nb_fields; k++){
+                f = document.getElementById("autofield"+String(k));
+                select.id = "v"+String(k);
+                f.appendChild(select.cloneNode(true));
+            }
+
+        </script>
+
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+        <script>
+
+            function auto_replace(){
+
+                //Vérifier que tout est complété (sortir sinon)
+                for (var i = fields.length-1; i >= 0; i--) {
+                    if(fields[i].selectedIndex == 0) {return};
+                }
+                
+                //Récupérer toutes les valeurs
+                var slctIdx = fields.map(f => f.selectedIndex);
+
+                //Séparer valeurs à gauche et valeurs associées à droite (sans la dernière ligne)
+                var left_values = [];
+                var assoc = new Map();
+                for (var i = 0; i < slctIdx.length-3; i += 2) {
+                    left_values.push(slctIdx[i]);
+                    assoc.set(slctIdx[i], slctIdx[i+1]);
+                }
+
+                //Trier les valeurs à gauche
+                left_values.sort(function(a,b){return a-b;});
+
+                //Replacer les valeurs gauches et droites associées
+                for (var i = 0; i < left_values.length; i ++) {
+                    fields[i*2].selectedIndex = left_values[i];
+                    fields[(i*2)+1].selectedIndex = assoc.get(left_values[i]);
+                }
+
+                //Inverser si nécéssaire les 2 derniers champs (dernière ligne)
+                if(slctIdx[17] > slctIdx[18]) {
+                    fields[17].selectedIndex = slctIdx[18];
+                    fields[18].selectedIndex = slctIdx[17];
+                }
+
+            }
+
+        </script>
+
+
+	</body>
+
+</html>

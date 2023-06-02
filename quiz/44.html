@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°44 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°44, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°44</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort" target="_blank">tome 7</a> pour réussir ce défi.
+            </p>
+
+            <p id="difficulty" title="2"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Qui a dit...
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p class="quote">
+                    <label>
+                        “Si on meurt à cause d’eux, je te tuerai, Harry !”<br>
+                        <input type="text" id="v1" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Poudlard est menacé ! Postez-vous le long des enceintes, protégez-nous, faites votre devoir envers notre école !”<br>
+                        <input type="text" id="v2" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “N’aie pas pitié des morts, Harry. Aie plutôt pitié des vivants et surtout de ceux qui vivent sans amour.”<br>
+                        <input type="text" id="v3" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Je te trouverai et je châtierai jusqu’au dernier homme, jusqu’à la dernière femme, jusqu’au dernier enfant qui aura essayé de te cacher à mes yeux.”<br>
+                        <input type="text" id="v4" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Bien sûr que ça se passe dans ta tête mais pourquoi donc faudrait-il en conclure que ce n’est pas réel ?”<br>
+                        <input type="text" id="v5" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Est-ce que ça fait mal ?”<br>
+                        <input type="text" id="v6" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Le ministère est tombé. Scrimgeour est mort. Ils arrivent !”<br>
+                        <input type="text" id="v7" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “Vous l’avez maintenu en vie pour qu’il puisse mourir au bon moment ?”<br>
+                        <input type="text" id="v8" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p class="quote">
+                    <label>
+                        “J’ai vu dans ton cœur et ton cœur est mien.”<br>
+                        <input type="text" id="v9" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('44')" title="Télécharger l'Easter egg">Easter egg n°44</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_1%C3%A8re_partie" target="_blank"> film de la 1ère partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('43.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('45.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 9;
+            let music_src = "../ressources/music/HP7/The Deathly Hallows.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
