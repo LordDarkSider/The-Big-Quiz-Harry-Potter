@@ -205,7 +205,7 @@ input, select, option {
     margin-right: 3%;
 }
 
-#challenge table td{
+#challenge table td, #challenge table th{
     padding: 10px 15px;
 }
 
