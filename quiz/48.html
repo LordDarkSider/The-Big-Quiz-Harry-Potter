@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°48 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°48, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°48</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu l'ensemble de la <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_(saga)" target="_blank">saga Harry Potter</a> pour réussir ce défi.<br>
+                🔍Certaines informations ne se trouvent pas dans les livres mais vous pourrez les trouver sur le <a href="https://harrypotter.fandom.com/fr/wiki/Wiki_Harry_Potter" target="_blank">wiki</a>.
+            </p>
+
+            <p id="difficulty" title="2"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Retrouver les Horcruxes de Lord Voldemort et leurs informations dans leur ordre de destruction.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <table>
+
+                    <style>select{width: 100%;}</style>
+
+                    <thead> 
+                        <th>Horcruxe</th> <th>Meurtre lié</th> <th>Cachette</th> <th>Destructeur</th> <th>Méthode de destruction</th> <th>Lieu de destruction</th> <th>Date de destruction</th>
+                    </thead>
+
+                    <tr>
+                        <td id="autofield1"></td> <td id="autofield2"></td> <td id="autofield3"></td>
+                        <td> <input type="text" id="v4" placeholder="Prénom Nom"> </td>
+                        <td id="autofield5"></td> <td id="autofield6"></td>
+                        <td>29 mai 1993</td>
+                    </tr>
+
+                    <tr>
+                        <td id="autofield7"></td> <td id="autofield8"></td> <td id="autofield9"></td>
+                        <td> <input type="text" id="v10" placeholder="Prénom Nom"> </td>
+                        <td id="autofield11"></td> <td id="autofield12"></td>
+                        <td>Été 1996</td>
+                    </tr>
+
+                    <tr>
+                        <td id="autofield13"></td> <td id="autofield14"></td> <td id="autofield15"></td>
+                        <td> <input type="text" id="v16" placeholder="Prénom Nom"> </td>
+                        <td id="autofield17"></td> <td id="autofield18"></td>
+                        <td>28 décembre 1997</td>
+                    </tr>
+
+                    <tr>
+                        <td id="autofield19"></td> <td id="autofield20"></td> <td id="autofield21"></td>
+                        <td> <input type="text" id="v22" placeholder="Prénom Nom"> </td>
+                        <td id="autofield23"></td> <td id="autofield24"></td>
+                        <td>2 mai 1998 (1)</td>
+                    </tr>
+
+                    <tr>
+                        <td id="autofield25"></td> <td id="autofield26"></td> <td id="autofield27"></td>
+                        <td> <input type="text" id="v28" placeholder="Prénom Nom"> </td>
+                        <td id="autofield29"></td> <td id="autofield30"></td>
+                        <td>2 mai 1998 (2)</td>
+                    </tr>
+
+                    <tr>
+                        <td id="autofield31"></td> <td id="autofield32"></td> <td id="autofield33"></td>
+                        <td> <input type="text" id="v34" placeholder="Prénom Nom"> </td>
+                        <td id="autofield35"></td> <td id="autofield36"></td>
+                        <td>2 mai 1998 (3)</td>
+                    </tr>
+
+                    <tr>
+                        <td id="autofield37"></td> <td id="autofield38"></td> <td id="autofield39"></td>
+                        <td> <input type="text" id="v40" placeholder="Prénom Nom"> </td>
+                        <td id="autofield41"></td> <td id="autofield42"></td>
+                        <td>2 mai 1998 (4)</td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('48')" title="Télécharger l'Easter egg">Easter egg n°48</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_2%C3%A8me_partie" target="_blank"> film de la 2ème partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('47.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('49.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 42;
+            let music_src = "../ressources/music/BONUS/Voldemort.mp3";
+
+            //Ajout des select
+            var f = document.getElementById('data');
+            select_values = [
+                /* horcruxes */ ["Bague de Gaunt", "Coupe de Helga Poufsouffle", "Diadème de Rowena Serdaigle", "Harry Potter", "Journal intime de Tom Jedusor", "Médaillon de Salazar Serpentard", "Nagini"],
+                /* victimes */ ["Tom Jedusor Sr.", "Bertha Jorkins", "Lily Potter", "Hepzibah Smith", "Myrtle Warren", "Paysan albanais", "Vagabond moldu"],
+                /* lieux */ ["Aucune", "Bureau du directeur de Poudlard", "Caverne", "Chambre des Secrets", "Coffre-fort des Lestrange à Gringotts", "Forêt de Dean", "Forêt interdite", "Hall d'entrée de Poudlard", "Maison des Gaunt", "Manoir des Malefoy", "Salle sur Demande"],
+                /* methodes destruc */ ["Crochet de Basilic", "Épée de Gryffondor", "Feudeymon", "Sortilège de la Mort"],
+            ];
+            select_id = [ [1,7,13,19,25,31,37], [2,8,14,20,26,32,38], [3,6,9,12,15,18,21,24,27,30,33,36,39,42], [5,11,17,23,29,35,41]];
+            var select = document.createElement('select');
+            select.options[0] = new Option("‎", "");
+            for(var i=0; i < select_values.length; i++){
+                var slct = select.cloneNode(true);
+                for(var j=0; j < select_values[i].length; j++){
+                    var val = select_values[i][j];
+                    slct.options[slct.options.length] = new Option(val, val);
+                }
+                for(var k=0; k < select_id[i].length; k++){
+                    f = document.getElementById("autofield"+String(select_id[i][k]));
+                    slct.id = "v"+String(select_id[i][k]);
+                    f.appendChild(slct.cloneNode(true));
+                }
+            }
+
+        </script>
+
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

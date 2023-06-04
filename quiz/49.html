@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°49 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°49, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2028 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°49</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu l'ensemble de la <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_(saga)" target="_blank">saga Harry Potter</a> pour réussir ce défi.<br>
+                🔍Certaines informations ne se trouvent pas dans les livres mais vous pourrez les trouver sur le <a href="https://harrypotter.fandom.com/fr/wiki/Wiki_Harry_Potter" target="_blank">wiki</a>.
+            </p>
+
+            <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Retrouver pour chacun des personnages sa maison à Poudlard.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <table>
+
+                    <thead> <th></th> <th>Gryffondor</th> <th>Poufsouffle</th> <th>Serdaigle</th> <th>Serpentard</th> </thead>
+                    
+                    <tr> <td>Regulus Black</td> <td><input type="radio" id="v1" name="p1" value="Gryffondor"></td> <td><input type="radio" id="v1" name="p1" value="Poufsouffle"></td> <td><input type="radio" id="v1" name="p1" value="Serdaigle"></td> <td><input type="radio" id="v1" name="p1" value="Serpentard"></td> </tr>
+                    <tr> <td>Pomona Chourave</td> <td><input type="radio" id="v2" name="p2" value="Gryffondor"></td> <td><input type="radio" id="v2" name="p2" value="Poufsouffle"></td> <td><input type="radio" id="v2" name="p2" value="Serdaigle"></td> <td><input type="radio" id="v2" name="p2" value="Serpentard"></td> </tr>
+                    <tr> <td>Albus Dumbledore</td> <td><input type="radio" id="v3" name="p3" value="Gryffondor"></td> <td><input type="radio" id="v3" name="p3" value="Poufsouffle"></td> <td><input type="radio" id="v3" name="p3" value="Serdaigle"></td> <td><input type="radio" id="v3" name="p3" value="Serpentard"></td> </tr>
+                    <tr> <td>Filius Flitwick</td> <td><input type="radio" id="v4" name="p4" value="Gryffondor"></td> <td><input type="radio" id="v4" name="p4" value="Poufsouffle"></td> <td><input type="radio" id="v4" name="p4" value="Serdaigle"></td> <td><input type="radio" id="v4" name="p4" value="Serpentard"></td> </tr>
+                    <tr> <td>Rubeus Hagrid</td> <td><input type="radio" id="v5" name="p5" value="Gryffondor"></td> <td><input type="radio" id="v5" name="p5" value="Poufsouffle"></td> <td><input type="radio" id="v5" name="p5" value="Serdaigle"></td> <td><input type="radio" id="v5" name="p5" value="Serpentard"></td> </tr>
+                    <tr> <td>Bellatrix Lestrange</td> <td><input type="radio" id="v6" name="p6" value="Gryffondor"></td> <td><input type="radio" id="v6" name="p6" value="Poufsouffle"></td> <td><input type="radio" id="v6" name="p6" value="Serdaigle"></td> <td><input type="radio" id="v6" name="p6" value="Serpentard"></td> </tr>
+                    <tr> <td>Gilderoy Lockhart</td> <td><input type="radio" id="v7" name="p7" value="Gryffondor"></td> <td><input type="radio" id="v7" name="p7" value="Poufsouffle"></td> <td><input type="radio" id="v2" name="p7" value="Serdaigle"></td> <td><input type="radio" id="v7" name="p7" value="Serpentard"></td> </tr>
+                    <tr> <td>Lucius Malefoy</td> <td><input type="radio" id="v8" name="p8" value="Gryffondor"></td> <td><input type="radio" id="v8" name="p8" value="Poufsouffle"></td> <td><input type="radio" id="v8" name="p8" value="Serdaigle"></td> <td><input type="radio" id="v8" name="p8" value="Serpentard"></td> </tr>
+                    <tr> <td>Minerva McGonagall</td> <td><input type="radio" id="v9" name="p9" value="Gryffondor"></td> <td><input type="radio" id="v9" name="p9" value="Poufsouffle"></td> <td><input type="radio" id="v9" name="p9" value="Serdaigle"></td> <td><input type="radio" id="v9" name="p9" value="Serpentard"></td> </tr>
+                    <tr> <td>Dolores Ombrage</td> <td><input type="radio" id="v10" name="p10" value="Gryffondor"></td> <td><input type="radio" id="v10" name="p10" value="Poufsouffle"></td> <td><input type="radio" id="v10" name="p10" value="Serdaigle"></td> <td><input type="radio" id="v10" name="p10" value="Serpentard"></td> </tr>
+                    <tr> <td>Peter Pettigrow</td> <td><input type="radio" id="v11" name="p11" value="Gryffondor"></td> <td><input type="radio" id="v11" name="p11" value="Poufsouffle"></td> <td><input type="radio" id="v11" name="p11" value="Serdaigle"></td> <td><input type="radio" id="v11" name="p11" value="Serpentard"></td> </tr>
+                    <tr> <td>Quirinus Quirrell</td> <td><input type="radio" id="v12" name="p12" value="Gryffondor"></td> <td><input type="radio" id="v12" name="p12" value="Poufsouffle"></td> <td><input type="radio" id="v12" name="p12" value="Serdaigle"></td> <td><input type="radio" id="v12" name="p12" value="Serpentard"></td> </tr>
+                    <tr> <td>Horace Slughorn</td> <td><input type="radio" id="v13" name="p13" value="Gryffondor"></td> <td><input type="radio" id="v13" name="p13" value="Poufsouffle"></td> <td><input type="radio" id="v13" name="p13" value="Serdaigle"></td> <td><input type="radio" id="v13" name="p13" value="Serpentard"></td> </tr>
+                    <tr> <td>Andromeda Tonks</td> <td><input type="radio" id="v14" name="p14" value="Gryffondor"></td> <td><input type="radio" id="v14" name="p14" value="Poufsouffle"></td> <td><input type="radio" id="v14" name="p14" value="Serdaigle"></td> <td><input type="radio" id="v14" name="p14" value="Serpentard"></td> </tr>
+                    <tr> <td>Nymphadora Tonks</td> <td><input type="radio" id="v15" name="p15" value="Gryffondor"></td> <td><input type="radio" id="v15" name="p15" value="Poufsouffle"></td> <td><input type="radio" id="v15" name="p15" value="Serdaigle"></td> <td><input type="radio" id="v15" name="p15" value="Serpentard"></td> </tr>
+                    <tr> <td>Sibylle Trelawney</td> <td><input type="radio" id="v16" name="p16" value="Gryffondor"></td> <td><input type="radio" id="v16" name="p16" value="Poufsouffle"></td> <td><input type="radio" id="v16" name="p16" value="Serdaigle"></td> <td><input type="radio" id="v16" name="p16" value="Serpentard"></td> </tr>
+
+                </table>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('49')" title="Télécharger l'Easter egg">Easter egg n°49</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_2%C3%A8me_partie" target="_blank"> film de la 2ème partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('48.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('50.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 16;
+            let music_src = "../ressources/music/BONUS/Harry's Wondrous World.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
