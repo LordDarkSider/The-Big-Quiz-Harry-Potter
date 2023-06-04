@@ -32,5 +32,18 @@ let links_easter_eggs = new Map([
     ["31", "https://drive.google.com/file/d/1tDVyRFcHbFs6VAqTyXAQ-adQ7fHJ2iYb/"],
     ["32", "https://drive.google.com/file/d/1Yx6LAtl5MkuTnTTcHztiGKBtBu8W5-ZQ/"],
     ["33", "https://drive.google.com/file/d/1lcsz3GxIwqhaCvcjp_62dk1ROzCvRWes/"],
-    ["34", "https://drive.google.com/file/d/1WjXaCLlGrDn_2zu0kVsLX8JIYxLPsrts/"]
+    ["34", "https://drive.google.com/file/d/1WjXaCLlGrDn_2zu0kVsLX8JIYxLPsrts/"],
+    ["35", "https://drive.google.com/file/d/1K-fn9c-xFZqVOTgJLVJaeXAcncLGTg0f/"],
+    ["36", "https://drive.google.com/file/d/1iaryPGIx5jxcNgIDt1VX-fAorrO7gwfS/"],
+    ["37", "https://drive.google.com/file/d/1HLMFdzw18rr1OjV3ZEwa0zjNahQBcMjC/"],
+    ["38", "https://drive.google.com/file/d/1vE-3_Fm-1_1z9w8NS40NxdP-QeIbW33E/"],
+    ["39", "https://drive.google.com/file/d/1SXptj41tcXLqf_lB1lmJMdDHEwbfLFtT/"],
+    ["40", "https://drive.google.com/file/d/1bDzDUR9HNDsqOsEJ4A4Ko1G705uq5ivA/"],
+    ["41", "https://drive.google.com/file/d/1OwNDoAeDJ6vmw0GAgLEFrN4kO9TO1InR/"],
+    ["42", "https://drive.google.com/file/d/1J3wNBBWzROYCzJxrBq4VaRbZ1Eekns29/"],
+    ["43", "https://drive.google.com/file/d/1tQAODmvcz0QbkSLBJ4e0BmGK7MtPXzQQ/"],
+    ["44", "https://drive.google.com/file/d/1tyK7kQ1iNkZkMoKU2tky1OShjlkE0L63/"],
+    ["45", "https://drive.google.com/file/d/1EIuP2DtGsD378GlHbcWPiFvpdW4DSOBG/"],
+    ["46", "https://drive.google.com/file/d/1XxQ1Hnq9dZKdM1kwuEKmDug84rhlv_Gi/"],
+    ["47", "https://drive.google.com/file/d/1XGl_Ab9mdITLW0ugfPGLRRCv5OQ_J-dT/"]
 ]);
