@@ -4,8 +4,14 @@ function go_to(link){
 }
 
 function easter_egg(num){
-    if(confirm("Souhaitez-vous télécharger l'easter egg ?\n\nℹ️ Si vous êtes sur la version hors ligne cette opération n'est pas nécessaire. Le fichier se trouve déjà dans le dossier 'easter eggs'.")){
+    if(confirm("Télécharger l'easter egg ?\n\nℹ️ Si vous êtes sur la version hors ligne cette opération n'est pas nécessaire. Le fichier se trouve déjà dans le dossier 'easter eggs'.")){
         window.open(links_easter_eggs.get(num), '_blank');
+    }
+}
+
+function offline_down(){
+    if(confirm("Télécharger la version hors ligne de The Big Quiz Harry Potter ?\n\nℹ️ Si vous êtes déjà sur la version hors ligne cela ne sert strictement à rien 😄")){
+        window.open("https://drive.google.com/file/d/1Gfzu1ThhoJLBgymI-aRnh-CbFQmIpIwX/", '_blank');
     }
 }
 
