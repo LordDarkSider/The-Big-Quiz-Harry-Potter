@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°52 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°52, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°52</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu l'ensemble de la <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_(saga)" target="_blank">saga Harry Potter</a> pour réussir ce défi.<br>
+                🔍Certaines informations ne se trouvent pas dans les livres mais vous pourrez les trouver sur le <a href="https://harrypotter.fandom.com/fr/wiki/Wiki_Harry_Potter" target="_blank">wiki</a>.
+            </p>
+
+            <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Retrouver pour chacun des personnages sa date de naissance (et de décès).
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <style>.perso{width: fit-content; display: inline-block; margin: 1em;}</style>
+
+                <div class="perso">
+                    Sirius Black<br>
+                    <span id="autofield1"></span>
+                </div>
+
+                <div class="perso">
+                    Cedric Diggory<br>
+                    <span id="autofield2"></span>
+                </div>
+
+                <div class="perso">
+                    Albus Dumbledore<br>
+                    <span id="autofield3"></span>
+                </div>
+
+                <div class="perso">
+                    Hermione Granger<br>
+                    <span id="autofield4"></span>
+                </div>
+
+                <div class="perso">
+                    Rubeus Hagrid<br>
+                    <span id="autofield5"></span>
+                </div>
+
+                <div class="perso">
+                    Tom Jedusor<br>
+                    <span id="autofield6"></span>
+                </div>
+
+                <div class="perso">
+                    Bellatrix Lestrange<br>
+                    <span id="autofield7"></span>
+                </div>
+
+                <div class="perso">
+                    Gilderoy Lockhart<br>
+                    <span id="autofield8"></span>
+                </div>
+
+                <div class="perso">
+                    Neville Londubat<br>
+                    <span id="autofield9"></span>
+                </div>
+
+                <div class="perso">
+                    Remus Lupin<br>
+                    <span id="autofield10"></span>
+                </div>
+
+                <div class="perso">
+                    Drago Malefoy<br>
+                    <span id="autofield11"></span>
+                </div>
+
+                <div class="perso">
+                    Lucius Malefoy<br>
+                    <span id="autofield12"></span>
+                </div>
+
+                <div class="perso">
+                    Minerva McGonagall<br>
+                    <span id="autofield13"></span>
+                </div>
+
+                <div class="perso">
+                    Harry Potter<br>
+                    <span id="autofield14"></span>
+                </div>
+
+                <div class="perso">
+                    James Potter<br>
+                    <span id="autofield15"></span>
+                </div>
+
+                <div class="perso">
+                    Lily Potter<br>
+                    <span id="autofield16"></span>
+                </div>
+
+                <div class="perso">
+                    Peter Pettigrow<br>
+                    <span id="autofield17"></span>
+                </div>
+
+                <div class="perso">
+                    Severus Rogue<br>
+                    <span id="autofield18"></span>
+                </div>
+
+                <div class="perso">
+                    Horace Slughorn<br>
+                    <span id="autofield19"></span>
+                </div>
+
+                <div class="perso">
+                    Nymphadora Tonks<br>
+                    <span id="autofield20"></span>
+                </div>
+
+                <div class="perso">
+                    Bill Weasley<br>
+                    <span id="autofield21"></span>
+                </div>
+
+                <div class="perso">
+                    Charlie Weasley<br>
+                    <span id="autofield22"></span>
+                </div>
+
+                <div class="perso">
+                    Fred Weasley<br>
+                    <span id="autofield23"></span>
+                </div>
+
+                <div class="perso">
+                    George Weasley<br>
+                    <span id="autofield24"></span>
+                </div>
+
+                <div class="perso">
+                    Ginny Weasley<br>
+                    <span id="autofield25"></span>
+                </div>
+
+                <div class="perso">
+                    Ron Weasley<br>
+                    <span id="autofield26"></span>
+                </div>
+
+                <p>
+                    Rappel
+                    <br>
+                    Bataille de Poudlard : 2 mai 1998
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('52')" title="Télécharger l'Easter egg">Easter egg n°52</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_2%C3%A8me_partie" target="_blank"> film de la 2ème partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('51.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 26;
+            let music_src = "../ressources/music/BONUS/The Resurrection Stone.mp3";
+
+            //Ajout des select
+            select_values = ["11/08/1981", "31/07/1980", "30/07/1980", "05/06/1980", "01/03/1980", "19/09/1979", "01/04/1978", "01/04/1978 - 02/05/1998", "1977 - 24/06/1995", "12/12/1972", "1972 ou 1973 - 02/05/1998", "29/11/1970", "26/01/1964", "14/05/1960 - 03/1998", "27/03/1960 - 31/10/1981", "10/03/1960 - 02/05/1998", "30/01/1960 - 31/10/1981", "09/01/1960 - 02/05/1998", "03/11/1959 - 18/06/1996", "1954", "1951 - 02/05/1998", "04/10/1935", "06/12/1928", "31/12/1926 - 02/05/1998", "28/04/1895", "08/1881 - 30/06/1997"];
+            var select = document.createElement('select');
+            select.options[0] = new Option("‎", "");
+            while(select_values.length){
+                    var val = select_values.pop();
+                    select.options[select.options.length] = new Option(val, val);
+            }
+            for(let k=1; k<=nb_fields; k++){
+                f = document.getElementById("autofield"+String(k));
+                select.id = "v"+String(k);
+                slct = select.cloneNode(true);
+                slct.addEventListener('change', function(){updateOptions(this.value);});
+                f.appendChild(slct);
+            }
+
+            function updateOptions(val){
+                for (var i = 0; i < nb_fields; i++) {
+                    var select = fields[i];
+                    for (var j = 1; j < select.options.length; j++) {
+                        var option = select.options[j];
+                        if (option.value == val) {option.disabled = true;} 
+                        else {option.disabled = false;}
+                    }
+                }
+            }
+
+        </script>
+
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

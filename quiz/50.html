@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°50 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°50, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°50</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu l'ensemble de la <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_(saga)" target="_blank">saga Harry Potter</a> pour réussir ce défi.<br>
+                🔍Certaines informations ne se trouvent pas dans les livres mais vous pourrez les trouver sur le <a href="https://harrypotter.fandom.com/fr/wiki/Wiki_Harry_Potter" target="_blank">wiki</a>.
+            </p>
+
+            <p id="difficulty" title="3"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Retrouver pour chacun des personnages la forme de son Patronus.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <table style="text-align:left;">
+
+                    <style>select{width: 100%; min-width: 50px;}</style>
+
+                    <tr>
+                        <td>Cho Chang</td> <td>⟶</td> <td id="autofield1"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Abelforth Dumbledore</td> <td>⟶</td> <td id="autofield2"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Albus Dumbledore</td> <td>⟶</td> <td id="autofield3"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Seamus Finnigan</td> <td>⟶</td> <td id="autofield4"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Hermione Granger</td> <td>⟶</td> <td id="autofield5"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Rubeus Hagrid</td> <td>⟶</td> <td id="autofield6"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Luna Lovegood</td> <td>⟶</td> <td id="autofield7"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Remus Lupin</td> <td>⟶</td> <td id="autofield8"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ernie Macmillan</td> <td>⟶</td> <td id="autofield9"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Minerva McGonagall</td> <td>⟶</td> <td id="autofield10"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dolores Ombrage</td> <td>⟶</td> <td id="autofield11"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Harry Potter</td> <td>⟶</td> <td id="autofield12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>James Potter</td> <td>⟶</td> <td id="autofield13"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Lily Potter</td> <td>⟶</td> <td id="autofield14"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Severus Rogue</td> <td>⟶</td> <td id="autofield15"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Kingsley Shacklebolt</td> <td>⟶</td> <td id="autofield16"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Nymphadora Tonks</td> <td>⟶</td> <td id="autofield17"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Lord Voldemort</td> <td>⟶</td> <td id="autofield18"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Arthur Weasley</td> <td>⟶</td> <td id="autofield19"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Fred Weasley</td> <td>⟶</td> <td id="autofield20"></td>
+                    </tr>
+
+                    <tr>
+                        <td>George Weasley</td> <td>⟶</td> <td id="autofield21"></td>
+                        <td style="padding: 10px 40px;">•</td>
+                        <td>Ginny Weasley</td> <td>⟶</td> <td id="autofield22"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Ron Weasley</td> <td>⟶</td> <td id="autofield23"></td>
+                    </tr>
+                    
+
+                </table>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('50')" title="Télécharger l'Easter egg">Easter egg n°50</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_2%C3%A8me_partie" target="_blank"> film de la 2ème partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('49.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('51.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 23;
+            let music_src = "../ressources/music/BONUS/The Patronus Light.mp3";
+
+            //Ajout des select
+            select_values = ["vautour", "tigre", "souris", "sombral", "singe", "serpent", "sanglier", "renard", "rat", "poisson", "pie", "phénix", "ours", "merle", "lynx", "loutre", "loup", "lion", "lièvre", "licorne", "hirondelle", "hippogriffe", "héron", "éléphant", "écureuil", "dragon", "dauphin", "cygne", "corbeau", "colombe", "chouette", "chien", "cheval", "chauve-souris", "chat", "cerf", "bouc", "biche", "blaireau", "belette", "araignée", "aigle", "aucun"];
+            var select = document.createElement('select');
+            select.options[0] = new Option("‎", "");
+            while(select_values.length){
+                    var val = select_values.pop();
+                    select.options[select.options.length] = new Option(val, val);
+            }
+            for(let k=1; k<=nb_fields; k++){
+                f = document.getElementById("autofield"+String(k));
+                select.id = "v"+String(k);
+                f.appendChild(select.cloneNode(true));
+            }
+
+        </script>
+
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>

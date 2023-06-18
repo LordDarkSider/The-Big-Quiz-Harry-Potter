@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<title>Défi n°51 | The Big Quiz HP</title>
+		<meta charset="utf-8">
+        <meta name="description" content="Défi n°51, The Big Quiz Harry Potter">
+        <meta name="author" content="Titouan Hinschberger">
+        <meta name="copyright" content="©2023 Titouan Hinschberger All rights reserved.">
+        <link href="../ressources/style.css" rel="stylesheet" media="all">
+        <link rel="icon" href="../ressources/images/quiz_icon.ico">
+        <link rel="image_src" href="../ressources/images/quiz_icon.png">
+	</head>
+	
+	<body>
+
+        <h1>The Big Quiz Harry Potter</h1>
+
+        <div id="infos">
+
+            <h2>Défi n°51</h2>
+
+            <p id="warning">
+                ⚠️Il est nécessaire d'avoir lu l'ensemble de la <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_(saga)" target="_blank">saga Harry Potter</a> pour réussir ce défi.<br>
+                🔍Certaines informations ne se trouvent pas dans les livres mais vous pourrez les trouver sur le <a href="https://harrypotter.fandom.com/fr/wiki/Wiki_Harry_Potter" target="_blank">wiki</a>.
+            </p>
+
+            <p id="difficulty" title="4"></p> <!-- 1,2,3 ou 4 -->
+
+            <p id="instruction">
+                👉<u>Consigne :</u> Répondre aux questions.
+            </p>
+
+        </div>
+
+		<div id="challenge">
+
+            <form onChange="change_key()">
+
+                <p>
+                    <label>
+                        Comment s'appelle le plus proche ami de Dudley ?<br>
+                        <input type="text" id="v1" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Quelle matière enseignait le professeur Quirrell avant la DCFM ?<br>
+                        <input type="text" id="v2">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Quel professeur de Poudlard serait descendant d'un gobelin ?<br>
+                        <input type="text" id="v3" placeholder="Prénom Nom">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Qu'est-ce que Gilderoy Lockhart n'a pas fait pour se faire remarquer lors de sa scolarité à Poudlard ?<br>
+                        <select id="v4">
+                            <option value="">‎</option>
+                            <option value="1">sculpter son nom en lettres de sept mètres sur le terrain de Quidditch</option>
+                            <option value="2">ériger une immense statue de lui-même au milieu de la dans la Grande Salle</option>
+                            <option value="3">créer une gigantesque projection lumineuse de son visage à la manière de la Marque des Ténèbres</option>
+                            <option value="4">s'envoyer à lui-même huit cents cartes de Saint-Valentin</option>
+                        </select>
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Quel objet magique possède le don de Legilimancie ?<br>
+                        <input type="text" id="v5">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Quel est le seul personnage connu à avoir subi le baiser du Détraqueur dans la saga Harry Potter ?<br>
+                        <input type="text" id="v6" placeholder="Prénom Nom" maxlength="20">
+                    </label>
+                </p>
+
+                <p>
+                    <label>
+                        Qui avait présagé sans le savoir la mort de Dumbledore 3 ans et demi auparavant ? À quelle date ?<br>
+                        <input type="text" id="v7" placeholder="Prénom Nom"> le <input type="date" id="v8">
+                    </label>
+                </p>
+
+            </form>
+
+		</div>
+
+		<div id="solution">
+
+            <p>
+                🗝️ La clé est <span id="key">. . .</span><br>
+                ✔️Avec cette clé vous pourrez peut-être ouvrir l'<a onclick="easter_egg('51')" title="Télécharger l'Easter egg">Easter egg n°51</a><br>
+                ⚠️Il peut contenir du SPOIL, il est recommandé d'avoir vu avant le <a href="https://harrypotter.fandom.com/fr/wiki/Harry_Potter_et_les_Reliques_de_la_Mort_:_2%C3%A8me_partie" target="_blank"> film de la 2ème partie du tome 7</a>
+            </p>
+
+		</div>
+
+        <img class="icon" id="home" src="../ressources/images/home.png" alt="Accueil" title="Accueil" onclick="go_to('../index.html')">
+        <img class="icon" id="last" src="../ressources/images/last.png" alt="Précédent" title="Défi précédent" onclick="go_to('50.html')">
+        <img class="icon" id="next" src="../ressources/images/next.png" alt="Suivant" title="Défi suivant" onclick="go_to('52.html')">
+        <img class="icon" id="music" src="../ressources/images/music-off.png" alt="Musique OFF" title="Activer la musique">
+
+
+
+        <script>
+            let nb_fields = 8;
+            let music_src = "../ressources/music/BONUS/The Dumbledores.mp3";
+        </script>
+        <script src="../ressources/script/difficulty.js"></script>
+        <script src="../ressources/script/keys.js"></script>
+        <script src="../ressources/script/key_engine.js"></script>
+        <script src="../ressources/script/links_easter_eggs.js"></script>
+        <script src="../ressources/script/interactions.js"></script>
+        <script src="../ressources/script/music.js"></script>
+
+
+	</body>
+
+</html>
